@@ -8,15 +8,17 @@ export default function Layout({ pageTitle, children }) {
     <>
       <GlobalStyle />
       <Navbar />
-      <Titre>{pageTitle}</Titre>
-      <main>{children}</main>
+      <Title>{pageTitle}</Title>
+      <Content>{children}</Content>
     </>
   );
 }
 
-const Titre = styled.h1`
+const Title = styled.h1`
   font-size: 3rem;
 `;
+
+const Content = styled.main``;
 
 export const Head = () => {
   return <title>frenchdev</title>;

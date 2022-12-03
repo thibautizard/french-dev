@@ -2,7 +2,7 @@ import React from "react";
 import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 import styled from "styled-components";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 export default function Blog({ data }) {
   const posts = data.allMdx.nodes;
 
@@ -10,9 +10,9 @@ export default function Blog({ data }) {
     <Layout pageTitle="Blog">
       {posts.map(({ frontmatter, id, excerpt }) => (
         <MiniaturePost key={id}>
-          <h3>{frontmatter.title}</h3>
-          <p>{frontmatter.date}</p>
-          <p>{excerpt}</p>
+          <Link to={`/blog/${frontmatter.slug}`}>{frontmatter.title}</Link>
+          <Date>{frontmatter.date}</Date>
+          <Extrait>{excerpt}</Extrait>
         </MiniaturePost>
       ))}
     </Layout>
@@ -22,6 +22,10 @@ export default function Blog({ data }) {
 const MiniaturePost = styled.article`
   margin-bottom: 40px;
 `;
+
+const Date = styled.p``;
+
+const Extrait = styled.p``;
 
 export const query = graphql`
   query {

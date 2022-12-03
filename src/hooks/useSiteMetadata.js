@@ -10,8 +10,7 @@ const useSiteMetadata = () => {
       }
     }
   `);
-
-  return data.site.siteMetadata.title;
+  return data.site.siteMetadata;
 };
 
 export default useSiteMetadata;

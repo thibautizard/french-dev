@@ -14,7 +14,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     {
       // To expose a variable in the browser, you must preface its name with GATSBY_. So GATSBY_API_URL will be available in browser code but API_KEY will not.
-      resolve: "gatsby-source-custom",
+      resolve: "gatsby-source-custom-api",
       options: {
         apiKey: process.env.API_KEY,
       },

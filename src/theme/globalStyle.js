@@ -11,7 +11,7 @@ html, body {
 body {
     margin:auto;
     width:90%;
-    max-width:800px;
+    max-width:900px;
     font-family: 'Josefin Sans', cursive;
 }
 `;

@@ -3,19 +3,22 @@ import styled from "styled-components";
 import Navbar from "./navbar";
 import GlobalStyle from "../theme/globalStyle";
 
-export default function Layout({ pageTitle, children }) {
+export default function Layout({ pageTitle, children, align }) {
   return (
     <>
       <GlobalStyle />
       <Navbar />
-      <Title>{pageTitle}</Title>
+      <Title align={align}>{pageTitle}</Title>
       <Content>{children}</Content>
     </>
   );
 }
 
 const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  text-align: ${({ align }) => align || "left"};
 `;
 
 const Content = styled.main``;

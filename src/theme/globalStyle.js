@@ -14,6 +14,7 @@ body {
     max-width:900px;
     font-family: 'Josefin Sans', cursive;
 }
+
 `;
 
 export default GlobalStyle;

@@ -11,10 +11,11 @@ const Accueil = () => {
         <Introduction>
           {" "}
           Développeur frontend depuis 4 ans, j'anime ce blog pour relayer au
-          public francophone toutes les ressources possibles et imaginables pour
-          booster ta carrière de développeur web. <br /> <br />
+          public francophone articles et ressources utiles pour booster ta
+          carrière de développeur web. <br /> <br />
           Dans les tutos, j'essaie d'expliquer et de démystifier les principaux
-          concepts qui t'aideront à mieux coder et à monter en compétence.
+          concepts qui t'aideront à mieux appréhender l'univers si vaste du
+          développement web et à monter en compétence.
         </Introduction>
 
         <Cards>

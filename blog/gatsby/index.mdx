@@ -1,0 +1,37 @@
+---
+title: "Gatsby"
+author: "Thibaut Izard"
+date: "2022-12-28"
+slug: "gatsby"
+---
+
+### Pourquoi ai-je choisi Gatsby ?
+
+
+#### Qu'est-ce que Gatsby ?
+
+Gatsby est un outil *open source* qui permet de **construire des sites et applications web*** statiques*, c'est-à-dire des sites qui ne sollicitent pas d'exécution de code côté serveur et n'interagissent pas avec une base de données (typiquement un blog), puis de les **mettre en ligne*** sur une plateforme dédiée (Gatsby Cloud). Pour s'affranchir le plus possible du serveur au cours de la navigation, l'intégralité des pages du site est générée lors du *build time* (la conversion du code développeur en fichiers lisibles par un navigateur) et non au *runtime* (la lecture des fichiers envoyés par le serveur sur le navigateur pour rendre le site). Ainsi, lorsque le client demande à accéder à une page durant sa navigation, celle-ci existe déjà et n'a pas besoin d'être générée sur commande par le serveur. Elle arrive donc au client dans de bien meilleurs délais. De tels sites se révèlent par conséquent **plus rapides** et offrent de surcroît de meilleures prises pour les robots de référencement tout en éliminant certaines menaces liées aux interfaces avec un serveur ou une base de données.
+
+*Site ou application web ? La différence entre ces deux concepts renvoie à la dose d'interactivité et leur complexité plus importante pour une application que pour un site : elle est de degré et non de nature. J'emploierai les deux termes de façon interchangeable puisque ce qui vaut pour l'un vaut pour l'autre*
+
+#### Les prérequis pour utiliser Gatsby
+
+Gatsby s'appuie sur deux technologies phares dans le monde du développement web : **React** et **GraphQL**. La première est une librairie très populaire pour bâtir des interfaces utilisateurs qui permet de décrire une page web sous forme de composants réutilisables. Elle a imposé un style inédit, le JSX combinant élégamment le HTML et le JS pour fondre les deux dans une même écriture. GraphQL est lui un langage de requête similaire au SQL pour piocher la donnée qui sera consommée par le site.
+
+Si l'usage de React seul permet déjà de composer une application web - moyennant le recours à quelques packages comme Webpack et Babel pour le retraduire sous une forme compréhensible par le navigateur -, il lui manque cruellement certaines fonctionnalités indispensables pour un site optimisé, sans qu'il ne s'agisse d'une lacune car React est justement pensé pour une adoption progressive et refuse d'imposer un cadre de construction trop contaignant. Les "frameworks sur framework/librairie" comme Gatsby, Next, Qwik ou Astro remplissent donc une toute autre mission, selon un usage complémentaire à celui de React ou d'autres librairies UI, avec une organisation et une hiérarchie déjà prévues de vos fichiers.
+
+*Schéma framework*
+
+Gatsby tire les leçons de la première génération de frameworks JS. L'envoi d'une application web sous forme d'une coquille HTML vide accompagné d'un énorme bundle JS immédiatemment exécuté côté client après réception pour "remplir" cette page. GatsbyJS, à l'instar de NextJS, renverse ce pari en proposant cette fois de pré-rendre le site sous forme de fichiers statiques HTML presque complets qui viendront au client saupoudrés d'un peu de JS pour gérer l'interactivité. Ainsi le coût du rendu de la page pèse moins sur le client que sur le serveur qui n'a besoin que de générer "une bonne fois pour toutes" l'ensemble des pages du site lesquelles seront délivrées ensuite sur commande. Pour gagner encore en performance, Gatsby se charge donc de limiter le chargement initial de fichiers HTML, CSS et JS au strict nécessaire et se montre assez intelligent pour préparer les ressources suivantes afin d'offrir l'exéprience utilisateur la plus fluide possible sur une SPA (*Single Page Application*).
+
+#### Un outils pour les gouverner tous...
+
+De plus Gatsby permet de déployer le site sur le *edge* ??
+
+Écosystème de plugins, de thèmes et de starters
+
+Mais le point fort de Gatsby est indéniablement son "data layer" qui permet d'agréger facilement différentes sources d'informations (Stripe, Wordpress, Shopify etc.) et d'unifier sous une même API qu'on peut manipuler grâce à GraphQL.
+
+
+###### Ressources
+[Logrocket](https://blog.logrocket.com/gatsby-ultimate-guide-examples/)

@@ -3,6 +3,7 @@ import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
+
 export default function Blog({ data }) {
   const posts = data.allMdx.nodes;
 
@@ -23,10 +24,6 @@ const MiniaturePost = styled.article`
   margin-bottom: 40px;
 `;
 
-const Date = styled.p``;
-
-const Extrait = styled.p``;
-
 export const query = graphql`
   query {
     allMdx(sort: { frontmatter: { date: DESC } }) {
@@ -42,5 +39,10 @@ export const query = graphql`
     }
   }
 `;
+
+const Date = styled.p``;
+
+const Extrait = styled.p``;
+
 
 export const Head = () => <Seo title="Blog" />;

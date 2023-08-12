@@ -1,39 +1,76 @@
---- 
+---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+import "../styles/reset.css";
+import "../styles/global.css";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <h1>The French Dev</h1>
+      <hr />
+      <hr />
+      <div class="subtitle">
+        <span>placeholder1</span>
+        <span class="date"
+          >{
+            new Date().toLocaleDateString("fr-FR", {
+              weekday: "long",
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })
+          }</span
+        >
+        <span>placeholder2</span>
+      </div>
+      <hr />
+      <hr />
+    </header>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  body {
+    padding-top: 3vh;
+    margin: auto;
+    max-width: 125ch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: clamp(25px, 10vw, 80px);
+    user-select: none;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  header hr {
+    margin: 1px 0;
+  }
+
+  header .subtitle {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 2%;
+  }
 </style>

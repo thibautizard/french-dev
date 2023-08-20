@@ -4,6 +4,12 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const currentDate = new Date().toLocaleDateString("fr-FR", {
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
 import "../styles/reset.css";
 import "../styles/global.css";
 ---
@@ -25,16 +31,7 @@ import "../styles/global.css";
       <hr />
       <div class="subtitle">
         <span>placeholder1</span>
-        <span class="date"
-          >{
-            new Date().toLocaleDateString("fr-FR", {
-              weekday: "long",
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })
-          }</span
-        >
+        <span class="date">{currentDate}</span>
         <span>placeholder2</span>
       </div>
       <hr />

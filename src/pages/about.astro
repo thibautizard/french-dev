@@ -1,8 +1,13 @@
 ---
-import '../styles/global.css';
-const pageTitle = "Ceci est écrit dans frontmatter"
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Ceci est écrit dans frontmatter";
 ---
 
-<h2>This is my blog website</h2>
-<a href="/"> Retour à l'accueil</a>
-<h3>{pageTitle}</h3>
+<Layout title="FrenchDev">
+  <main>
+    <h2>This is my blog website</h2>
+    <a href="/"> Retour à l'accueil</a>
+    <h3>{pageTitle}</h3>
+  </main>
+</Layout>

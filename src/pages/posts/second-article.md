@@ -1,13 +1,13 @@
 ---
-layout : '../../layouts/MarkdownPostsLayout.astro'
-title: 'My Second Blog Post'
-slug: 'second-article'
+layout: "../../layouts/PostLayout.astro"
+title: "My Second Blog Post"
+slug: "second-article"
 pubDate: 2022-07-01
-description: 'This is the second post of my new Astro blog.'
-author: 'Astro Learner'
+description: "This is the second post of my new Astro blog."
+author: "Astro Learner"
 image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'The full Astro logo.'
+  url: "https://docs.astro.build/assets/full-logo-light.png"
+  alt: "The full Astro logo."
 tags: ["astro", "blogging", "learning in public"]
 ---
 
@@ -30,8 +30,6 @@ I will finish the Astro tutorial, and then keep adding more posts. Watch this sp
 <h3> Titre de niveau 3 </h3>
 
 > quote
->
->
 
 </div>
 

@@ -1,18 +1,10 @@
 ---
-interface Props {
-  title: string;
-}
+import { formatExpliciteDate } from "../utils/date";
 
-const { title } = Astro.props;
-const currentDate = new Date().toLocaleDateString("fr-FR", {
-  weekday: "long",
-  day: "numeric",
-  month: "long",
-  year: "numeric",
-});
+const currentDate = formatExpliciteDate();
 import "../styles/reset.css";
 import "../styles/global.css";
-import BaseHead from "../components/BaseHead.astro";
+import BaseHead from "./BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 

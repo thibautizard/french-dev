@@ -1,6 +1,7 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../../layouts/PostLayout.astro"
 title: "My Second Blog Post"
+id: 2
 slug: "second-article"
 pubDate: 2022-07-01
 description: "This is the second post of my new Astro blog."

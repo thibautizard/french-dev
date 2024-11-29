@@ -1,13 +1,13 @@
 ---
 import { getEntry } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostLayout from '../../layouts/PostLayout.astro';
 
 const { slug } = Astro.params;
 
-const blogPost = await getEntry('blog', slug);
-const { Content } = await blogPost.render();
+const blogPost = await getEntry<any, any>('blog', slug);
+const { Content } = await (blogPost as any).render();
 ---
 
-<BaseLayout>
+<PostLayout>
   <Content />
-</BaseLayout>
+</PostLayout>

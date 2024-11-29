@@ -21,6 +21,12 @@
         "trailer": "Changelog: fix"
       },
       {
+        "value": "style",
+        "label": "style",
+        "hint": "A style change",
+        "emoji": "🎨"
+      },
+      {
         "value": "docs",
         "label": "docs",
         "hint": "Documentation only changes",

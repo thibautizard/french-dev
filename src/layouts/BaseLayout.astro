@@ -1,5 +1,14 @@
 ---
 const { pageTitle } = Astro.props;
+
+// 🧱 Components
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+// 🖋️ Fonts
+import '@fontsource/rammetto-one';
+import '@fontsource/kanit';
+import '@fontsource/birthstone';
 ---
 
 <html lang="en">
@@ -20,8 +29,12 @@ const { pageTitle } = Astro.props;
     />
     <title>{pageTitle}</title>
   </head>
-  <body>
-    <h1>{pageTitle}</h1>
-    <slot />
+  <body class="flex font-kanit bg-blue text-white flex-col min-h-screen">
+    <div class="h-5 mb-4 bg-marine"></div>
+    <Header />
+    <main class="grow px-8">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>

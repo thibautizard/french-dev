@@ -16,14 +16,19 @@
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/react": "^3.6.3",
     "@astrojs/tailwind": "^5.1.2",
+    "@fontsource/birthstone": "^5.1.0",
+    "@fontsource/kanit": "^5.1.0",
+    "@fontsource/rammetto-one": "^5.1.0",
     "astro": "^4.16.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.15",
-    "typescript": "^5.7.2"
+    "tailwindcss": "^3.4.15"
   },
   "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "better-commits": "^1.15.7",
-    "prettier": "^3.4.1"
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2"
   }
 }

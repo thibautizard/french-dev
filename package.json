@@ -17,6 +17,7 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "better-commits": "^1.15.7",
     "prettier": "^3.4.1"
   }
 }

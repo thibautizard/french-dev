@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+// 🔌 Plug in
 const colors = require('tailwindcss/colors');
+const prose = require('@tailwindcss/typography');
 
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -12,8 +14,7 @@ export default {
         blue: '#223382',
         lightBlue: '#9BACD8',
         marine: '#111144',
-        beige: '#DAD1C8',
-        white: '#F4F1EC ',
+        beige: '#F4F1EC',
       },
       // 🖋️ Fonts
       fontFamily: {
@@ -23,5 +24,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [prose],
 };

@@ -1,7 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
-
+import Prose from '../../components/Prose.astro';
 const { slug } = Astro.params;
 
 const blogPost = await getEntry<any, any>('blog', slug);
@@ -9,5 +9,7 @@ const { Content } = await (blogPost as any).render();
 ---
 
 <PostLayout>
-  <Content />
+  <Prose>
+    <Content />
+  </Prose>
 </PostLayout>

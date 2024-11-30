@@ -1,12 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import WhiteTriangle from '../../public/white-triangle.svg';
 ---
 
 <BaseLayout>
   <div class="mx-auto mb-8 max-w-[75ch]">
-    <div
-      class="[background-size:70px] h-[40px] bg-[url('../../public/white-triangle.svg')]"
+    <div class="[background-size:70px] h-[40px] bg-[url('/white-triangle.svg')]"
     ></div>
     <article class="post-layout bg-white text-black space-y-4 pt-8 pb-8">
       <div class="px-6">
@@ -14,7 +12,7 @@ import WhiteTriangle from '../../public/white-triangle.svg';
       </div>
     </article>
     <div
-      class="[background-size:70px] rotate-180 h-[40px] bg-[url('../../public/white-triangle.svg')]"
+      class="[background-size:70px] rotate-180 h-[40px] bg-[url('/white-triangle.svg')]"
     ></div>
   </div>
 </BaseLayout>

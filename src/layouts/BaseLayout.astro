@@ -1,5 +1,7 @@
 ---
-const { pageTitle } = Astro.props;
+// 🔩 Base
+import { ViewTransitions } from 'astro:transitions';
+import { fade } from 'astro:transitions';
 
 // 🧱 Components
 import Header from './Header.astro';
@@ -9,9 +11,12 @@ import Footer from './Footer.astro';
 import '@fontsource/rammetto-one';
 import '@fontsource/kanit';
 import '@fontsource/birthstone';
+
+// 📦 Data
+const { pageTitle } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <link
@@ -28,6 +33,7 @@ import '@fontsource/birthstone';
       content={Astro.generator}
     />
     <title>{pageTitle}</title>
+    <ViewTransitions />
   </head>
   <body class="flex font-kanit bg-beige text-black flex-col min-h-screen">
     <Header />
@@ -35,5 +41,5 @@ import '@fontsource/birthstone';
       <slot />
     </main>
     <Footer />
-  </body>
-</html>
+  </body></html
+>

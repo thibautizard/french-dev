@@ -1,5 +1,9 @@
-<header class="flex justify-center py-8">
+---
+const { className } = Astro.props;
+---
+
+<header class={className}>
   <a href="/">
-    <h1 class="text-9xl font-rammetto tracking-tighter">French Dev</h1>
+    <h1 class="text-7xl font-rammetto tracking-tighter">French Dev</h1>
   </a>
 </header>

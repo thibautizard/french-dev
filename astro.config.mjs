@@ -14,4 +14,7 @@ export default defineConfig({
   output: 'hybrid',
   adapter: cloudflare(),
   integrations: [tailwind(), mdx(), react()],
+  server: {
+    port: 5000,
+  },
 });
